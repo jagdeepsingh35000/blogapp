@@ -50,7 +50,7 @@ const UpdateBlog = () => {
     {
       console.log(res)
       alert("product updated")
-      // navigate("/allproducts")
+      navigate("/my-blog")
     })
     .catch((err)=>
     {

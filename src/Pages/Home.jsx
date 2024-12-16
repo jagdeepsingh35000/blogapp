@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import BlogContext from "../../Context/BlogContext";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from "react-responsive-carousel";
+import Footer from "./Footer";
 
 export default function Home() {
   const {blog,setBlog} = useContext(BlogContext)
@@ -40,19 +41,27 @@ export default function Home() {
       <div className="font-sans leading-relaxed">
         {/* Featured Post */}
        
-        <section className="p-8 text-center">
-          <Carousel showThumbs={false} className="w-2/4 mx-auto">
+        <section className="p-8 text-center  ">
+          <Carousel
+           showThumbs={false} 
+          showStatus={false}
+          showArrows={false}
+          transitionTime={500}
+          interval={3000} 
+          autoPlay
+          infiniteLoop
+           className="w-2/4 mx-auto ">
             <div>
               <img src="https://img.freepik.com/premium-photo/chameleon-wearing-sunglasses-solid-color-background-vector-art-minimal-abstract-generative_832935-3.jpg?semt=ais_hybrid" alt="Slide 1" />
-              <p className="legend max-w-full rounded-lg mx-auto">Legend 1</p>
+             
             </div>
             <div>
               <img src="https://img.freepik.com/premium-photo/beautiful-photo-is-must-everyday-work-ai-generated-best-wonderful-photo-images-very-nice_1089151-1199.jpg" alt="Slide 2" />
-              <p className="legend max-w-full rounded-lg mx-auto">Legend 2</p>
+             
             </div>
             <div>
               <img src="https://letsenhance.io/static/8f5e523ee6b2479e26ecc91b9c25261e/1015f/MainAfter.jpg" alt="Slide 3" />
-              <p className="legend max-w-full rounded-lg mx-auto">Legend 3</p>
+             
             </div>
           </Carousel>
           <h2 className="text-2xl font-semibold mt-4">{featuredPost.title}</h2>
@@ -94,10 +103,7 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Footer */}
-        <footer className="bg-gray-800 text-white text-center p-4 mt-8">
-          <p>&copy; 2024 My Blog. All rights reserved.</p>
-        </footer>
+      <Footer/>
       </div>
     </div>
   );

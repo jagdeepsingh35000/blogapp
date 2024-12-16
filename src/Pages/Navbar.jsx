@@ -16,7 +16,7 @@ export default function Navbar() {
     <nav className="bg-white shadow-lg sticky top-0 z-50">
     <div className=" bg-red-300 mx-auto px-4  flex items-center justify-between">
       {/* Brand Logo */}
-      <div className="text-[40px] font-bold text-blue-600 p-7 ">
+      <div className="text-[40px] font-bold text-blue-600 p-4 ">
         <Link to="/">MyBlog</Link>
       </div>
 
