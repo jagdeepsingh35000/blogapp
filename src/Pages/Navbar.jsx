@@ -52,7 +52,7 @@ export default function Navbar() {
       <div className='hidden md:flex font-semibold text-[30px] space-x-9'>
       <Link
           to="/login"
-          className="text-gray-700 hover:text-blue-500 transition duration-200"
+          className="text-blue-400 hover:text-blue-800 transition duration-200"
         >
           Login
         </Link>
