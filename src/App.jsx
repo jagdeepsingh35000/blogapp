@@ -14,6 +14,7 @@ import ForgotPassword from "./Pages/ForgotPassword";
 import ViewOneBlog from "./Pages/ViewOneBlog";
 import UserProfile from "./Pages/UserProfile";
 import UpdateBlog from "./Pages/UpdateBlog";
+import AboutPage from "./Pages/Aboutpage";
 
 function App() {
 
@@ -54,7 +55,9 @@ function App() {
         <Route path="/create-blog" element={<CreateBlog />}></Route>
         <Route path="/view" element={<ViewOneBlog />}></Route>
         <Route path="/my-blog" element={<UserProfile/>}></Route>
+        <Route path="/about" element={<AboutPage/>}></Route>
         <Route path="/update" element={<UpdateBlog/>}></Route>
+
         <Route path="/forgot-password" element={<ForgotPassword/>}></Route>
       </Routes>
       {/* <SignupForm/> */}

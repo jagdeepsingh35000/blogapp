@@ -16,12 +16,12 @@ export default function Navbar() {
     <nav className="bg-white shadow-lg sticky top-0 z-50">
     <div className=" bg-red-300 mx-auto px-4  flex items-center justify-between">
       {/* Brand Logo */}
-      <div className="text-[40px] font-bold text-blue-600 p-4 ">
+      <div className="text-[30px] font-bold text-blue-600 p-2 ">
         <Link to="/">MyBlog</Link>
       </div>
 
       {/* Desktop Menu */}
-      <div className="hidden md:flex font-semibold text-[30px] space-x-9">
+      <div className="hidden md:flex font-semibold text-[20px] space-x-9">
         <Link
           to="/"
           className="text-gray-700  hover:text-blue-500 transition duration-200"
@@ -49,7 +49,7 @@ export default function Navbar() {
       </div>
      {
       (!user)?
-      <div className='hidden md:flex font-semibold text-[30px] space-x-9'>
+      <div className='hidden md:flex font-semibold text-[20px] space-x-9'>
       <Link
           to="/login"
           className="text-blue-400 hover:text-blue-800 transition duration-200"
@@ -58,9 +58,9 @@ export default function Navbar() {
         </Link>
         
       </div>:
-      <div className='hidden md:flex font-semibold text-[30px] space-x-2'> 
+      <div className='hidden md:flex font-semibold text-[20px] space-x-2'> 
       <div>
-        <img  className = "w-[50px] h-[50px] rounded-full" src={user.image.imageUrl}></img>
+        <img  className = "w-[35px] h-[35px] rounded-full" src={user.image.imageUrl}></img>
       </div>
        <Link
         onClick= {()=>
