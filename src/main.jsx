@@ -11,10 +11,10 @@ createRoot(document.getElementById('root')).render(
  <BrowserRouter>
  <UserContextProvider> 
   <BlogContextProvider>
-  <StrictMode>
+  
     <App />
     <ToastContainer />
-  </StrictMode>
+  
   </BlogContextProvider>
 
   </UserContextProvider>

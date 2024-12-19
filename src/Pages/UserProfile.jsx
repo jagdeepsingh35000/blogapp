@@ -83,10 +83,10 @@ useEffect(()=>
       <Navbar />
 
       {/* Main Content */}
-      <div className="flex-grow  max-w-9xl mx-auto p-6 flex flex-col lg:flex-row lg:space-x-8">
+      <div className="flex-grow  max-w-9xl mx-auto p-6 flex flex-col lg:flex-row lg:space-x-8 space-y-6 lg:space-y-0">
         {/* User Profile Section */}
         {user && (
-          <div className="w-full lg:w-1/3 bg-white shadow-md rounded-lg p-6 flex flex-col items-center h-fit flex-shrink-0">
+          <div className="w-full lg:w-1/3  bg-white shadow-md rounded-lg p-6 flex flex-col items-center h-fit flex-shrink-0">
             <img
               src={user?.image?.imageUrl || "https://via.placeholder.com/150"}
               alt="User Avatar"

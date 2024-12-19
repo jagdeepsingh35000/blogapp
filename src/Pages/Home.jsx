@@ -41,7 +41,7 @@ export default function Home() {
       <div className="font-sans leading-relaxed">
         {/* Featured Post */}
        
-        <section className="p-8 text-center  ">
+        <section className="p-4 sm:p-6 lg:p-8 text-center ">
           <Carousel
            showThumbs={false} 
           showStatus={false}
@@ -50,7 +50,7 @@ export default function Home() {
           interval={3000} 
           autoPlay
           infiniteLoop
-           className="w-2/4 mx-auto ">
+           className="lg:w-2/4 mx-auto sm:w-3/4 w-full">
             <div>
               <img src="https://img.freepik.com/premium-photo/chameleon-wearing-sunglasses-solid-color-background-vector-art-minimal-abstract-generative_832935-3.jpg?semt=ais_hybrid" alt="Slide 1" />
              
@@ -71,6 +71,7 @@ export default function Home() {
         <section className="p-8">
           <h3 className="text-xl font-semibold mb-4">Recent Posts</h3>
           <div className="space-y-6">
+
             {recentPosts.map((post) =>{
 
               const date =  new Date(post.updatedAt) //passing date in to date object
@@ -81,9 +82,9 @@ export default function Home() {
               
               return  (
 
-            <Link to="/view" state={post}>
+            <Link to="/view" key={post._id} state={post}>
                 <div
-                  key={post.id}
+                 
                   className="flex items-start border-b pb-4 space-x-4"
                 >
                   {/* Image Icon */}
@@ -94,7 +95,7 @@ export default function Home() {
                   />
                   <div>
                     <h4 className="text-lg font-medium">{post.title}</h4>
-                    <p className="text-gray-600">{post.content}</p>
+                    <p className="text-gray-600">{post.content.substring(0, 100)}...</p>
                     <small className="text-gray-500">{`${monthNames[date.getUTCMonth()]} ${date.getDate()} , ${date.getUTCFullYear()}`}</small>
                   </div>
                 </div></Link>
